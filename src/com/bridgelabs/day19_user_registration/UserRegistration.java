@@ -23,4 +23,9 @@ public class UserRegistration {
         boolean matches = pattern.matcher(mobile).matches();
         return matches;
     }
+    public boolean validatePassword(String password) {
+        Pattern pattern = Pattern.compile("[a-z]{8}");
+        boolean matches = pattern.matcher(password).matches();
+        return matches;
+    }
 }
