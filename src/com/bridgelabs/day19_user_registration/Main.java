@@ -7,15 +7,21 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter the first name to validate");
         String firstName = scanner.next();
-        if (user.Validation(firstName) == true)
+        if (user.validateName(firstName) == true)
             System.out.println("Valid input first name");
         else
             System.out.println("Invalid input first name");
         System.out.println("Enter the first name to validate");
         String lastName = scanner.next();
-        if (user.Validation(lastName) == true)
+        if (user.validateName(lastName) == true)
             System.out.println("Valid input last name");
         else
             System.out.println("Invalid input last name");
+        System.out.println("Enter the email id");
+        String email = scanner.next();
+        if (user.validateEmail(email) == true)
+            System.out.println("Valid input email");
+        else
+            System.out.println("Invalid input email");
     }
 }
