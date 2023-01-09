@@ -23,5 +23,10 @@ public class Main {
             System.out.println("Valid input email");
         else
             System.out.println("Invalid input email");
+        String mobile = scanner.next();
+        if (user.validateMobile(mobile) == true)
+            System.out.println("Valid input mobile number");
+        else
+            System.out.println("Invalid input mobbile number");
     }
 }
