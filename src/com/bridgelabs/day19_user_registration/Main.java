@@ -1,7 +1,8 @@
 package com.bridgelabs.day19_user_registration;
+import java.io.FileNotFoundException;
 import java.util.Scanner;
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FileNotFoundException {
         System.out.println("Welcome to day 19 user registration program");
         UserRegistration user = new UserRegistration();
         Scanner scanner = new Scanner(System.in);
@@ -35,5 +36,7 @@ public class Main {
             System.out.println("Valid input password");
         else
             System.out.println("Invalid input password");
+        SampleEmailCheck sampleEmailCheck = new SampleEmailCheck();
+        sampleEmailCheck.sampleEmailCheck();
     }
 }
