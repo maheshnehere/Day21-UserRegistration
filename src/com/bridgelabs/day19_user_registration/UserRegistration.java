@@ -19,7 +19,7 @@ public class UserRegistration {
         return matches;
     }
     public boolean validateMobile(String mobile) {
-        Pattern pattern = Pattern.compile("^91([ ])?[6-9]{1}[0-9]{9}$");
+        Pattern pattern = Pattern.compile("^(91[ ])?[6-9]{1}[0-9]{9}$");
         boolean matches = pattern.matcher(mobile).matches();
         return matches;
     }
