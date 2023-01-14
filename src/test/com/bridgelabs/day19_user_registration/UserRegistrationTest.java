@@ -6,6 +6,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 import java.io.FileNotFoundException;
+import java.util.ArrayList;
 
 
 public class UserRegistrationTest {
@@ -37,12 +38,16 @@ public class UserRegistrationTest {
     }
     @Test
     public void testValidEmailCheck() throws Exception {
-        boolean result = sampleEmailCheck.validEmailcheck();
-        Assert.assertTrue(result);
+        ArrayList<Boolean> result = sampleEmailCheck.validEmailcheck();
+        for(boolean results : result) {
+            Assert.assertTrue(results);
+        }
     }
     @Test
     public void testInValidEmailCheck() throws Exception {
-        boolean result = sampleEmailCheck.invalidEmailcheck();
-        Assert.assertTrue(result);
+        ArrayList<Boolean> result = sampleEmailCheck.invalidEmailcheck();
+        for(boolean results : result) {
+            Assert.assertTrue(results);
+        }
     }
 } 

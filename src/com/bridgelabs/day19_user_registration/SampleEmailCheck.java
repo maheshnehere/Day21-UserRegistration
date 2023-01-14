@@ -17,8 +17,9 @@ public class SampleEmailCheck {
 
     public SampleEmailCheck() throws FileNotFoundException {
     }
-    boolean isValid;
-    public boolean validEmailcheck() {
+
+    ArrayList<Boolean> isValid = new ArrayList<>();
+    public ArrayList<Boolean> validEmailcheck() {
         while(sc1.hasNextLine()) {
             validEmails.add(sc1.nextLine()); //this loop will continue unless there is no next line and add each line as a arraylist
         }
@@ -28,17 +29,18 @@ public class SampleEmailCheck {
             if(matches)
             {
                 System.out.println(valid+" is Valid");
-                isValid = true;
+                isValid.add(true);
             }
             else
             {
                 System.out.println(valid+" is inValid");
-                isValid = false;
+                isValid.add(false);
             }
         }
         return isValid;
     }
-    public boolean invalidEmailcheck() {
+    ArrayList<Boolean> isInValid = new ArrayList<>();
+    public ArrayList<Boolean> invalidEmailcheck() {
         while(sc2.hasNextLine()) {
             inValidEmails.add(sc2.nextLine());
         }
@@ -48,13 +50,13 @@ public class SampleEmailCheck {
             if(matches)
             {
                 System.out.println(inValid+" is Valid");
-                isValid = false;
+                isInValid.add(false);
             }
             else {
                 System.out.println(inValid+" is invalid");
-                isValid = true;
+                isInValid.add(true);
             }
         }
-        return isValid;
+        return isInValid;
     }
 }
