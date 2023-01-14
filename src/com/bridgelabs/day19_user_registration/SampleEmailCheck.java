@@ -25,16 +25,21 @@ public class SampleEmailCheck {
         }
         System.out.println("\nList of valid email samples\n");
         for (String valid : validEmails) {
-            boolean matches = pattern.matcher(valid).matches();
-            if(matches)
-            {
-                System.out.println(valid+" is Valid");
-                isValid.add(true);
+            try {
+                boolean matches = pattern.matcher(valid).matches();
+                if(matches)
+                {
+                    System.out.println(valid+" is Valid");
+                    isValid.add(true);
+                }
+                else
+                {
+                    isValid.add(false);
+                    throw new UserRegistrationException(UserRegistrationException.ExceptionType.InValidEmail, "Invalid Email, please check the entered email");
+                }
             }
-            else
-            {
-                System.out.println(valid+" is inValid");
-                isValid.add(false);
+            catch (UserRegistrationException e) {
+                System.out.println(e.getMessage());
             }
         }
         return isValid;
@@ -46,15 +51,20 @@ public class SampleEmailCheck {
         }
         System.out.println("\nList of InValid email samples\n");
         for (String inValid : inValidEmails) {
-            boolean matches = pattern.matcher(inValid).matches();
-            if(matches)
-            {
-                System.out.println(inValid+" is Valid");
-                isInValid.add(false);
+            try {
+                boolean matches = pattern.matcher(inValid).matches();
+                if(matches)
+                {
+                    isInValid.add(false);
+                    throw new UserRegistrationException(UserRegistrationException.ExceptionType.InValidEmail, "Invalid Email, please check the entered email");
+                }
+                else {
+                    System.out.println(inValid+" is invalid");
+                    isInValid.add(true);
+                }
             }
-            else {
-                System.out.println(inValid+" is invalid");
-                isInValid.add(true);
+            catch (UserRegistrationException e) {
+                System.out.println(e.getMessage());
             }
         }
         return isInValid;
