@@ -10,10 +10,6 @@ public class UserRegistration {
             return matches;
         }
     public boolean validateEmail(String email) {
-/*        E.g. abc.xyz@bl.co.in
-        Email has 3 mandatory parts (abc, bl & co) and 2 optional (xyz & in)
-        with precise @ and . positions
- */
         Pattern pattern = Pattern.compile("^[a-zA-Z0-9]+([._-[+]][a-zA-Z0-9]+)*@([a-z1-9]+)([.][a-z]*)?(\\.[a-z]{2,})$");
         boolean matches = pattern.matcher(email).matches();
         return matches;
