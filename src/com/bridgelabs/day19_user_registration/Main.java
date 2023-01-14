@@ -12,7 +12,7 @@ public class Main {
             System.out.println("Valid input first name");
         else
             System.out.println("Invalid input first name");
-        System.out.println("Enter the first name to validate");
+        System.out.println("Enter the last name to validate");
         String lastName = scanner.next();
         if (user.validateName(lastName) == true)
             System.out.println("Valid input last name");
