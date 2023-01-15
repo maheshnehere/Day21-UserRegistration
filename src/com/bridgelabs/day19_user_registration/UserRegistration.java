@@ -4,23 +4,23 @@ import java.util.regex.Pattern;
 
 public class UserRegistration {
     boolean matches;
-        public boolean validateName(String name)
-        {
-            try {
-                Pattern pattern=Pattern.compile("^[A-Z][a-zA-Z]{2,}");
-                matches = pattern.matcher(name).matches();
-                if(matches) {
-                    return matches;
-                }
-                else {
-                    throw new UserRegistrationException(UserRegistrationException.ExceptionType.InValidName, "Invalid Name, please check the entered name");
-                }
-            } catch (UserRegistrationException e) {
-                System.out.println(e.getMessage());
+
+    public IValidator name = (name) -> {
+        try {
+            Pattern pattern=Pattern.compile("^[A-Z][a-zA-Z]{2,}");
+            matches = pattern.matcher(name).matches();
+            if(matches) {
+                return matches;
             }
-            return matches;
+            else {
+                throw new UserRegistrationException(UserRegistrationException.ExceptionType.InValidName, "Invalid Name, please check the entered name");
+            }
+        } catch (UserRegistrationException e) {
+            System.out.println(e.getMessage());
         }
-    public boolean validateEmail(String email) {
+        return matches;
+    };
+    public IValidator email = (email) -> {
         try {
             Pattern pattern = Pattern.compile("^[a-zA-Z0-9]+([._-[+]][a-zA-Z0-9]+)*@([a-z1-9]+)([.][a-z]*)?(\\.[a-z]{2,})$");
             matches = pattern.matcher(email).matches();
@@ -35,8 +35,8 @@ public class UserRegistration {
             System.out.println(e.getMessage());
         }
         return matches;
-    }
-    public boolean validateMobile(String mobile) {
+    };
+    public IValidator mobile = (mobile) -> {
         try {
             Pattern pattern = Pattern.compile("^(91[ ])?[6-9]{1}[0-9]{9}$");
             boolean matches = pattern.matcher(mobile).matches();
@@ -51,8 +51,8 @@ public class UserRegistration {
             System.out.println(e.getMessage());
         }
         return matches;
-    }
-    public boolean validatePassword(String password) {
+    };
+    public IValidator password = (password) -> {
         try {
             Pattern pattern = Pattern.compile("(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8}");
             boolean matches = pattern.matcher(password).matches();
@@ -67,5 +67,5 @@ public class UserRegistration {
             System.out.println(e.getMessage());
         }
         return matches;
-    }
+    };
 }
