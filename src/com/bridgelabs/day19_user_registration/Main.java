@@ -17,5 +17,6 @@ public class Main {
             System.out.println("Valid input last name");
         else
             System.out.println("Invalid input last name");
+            
     }
 }
