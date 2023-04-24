@@ -38,5 +38,6 @@ public class Main {
             System.out.println("Invalid input password");
         SampleEmailCheck sampleEmailCheck = new SampleEmailCheck();
         sampleEmailCheck.sampleEmailCheck();
+        
     }
 }
