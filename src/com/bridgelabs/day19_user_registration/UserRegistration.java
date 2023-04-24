@@ -4,6 +4,7 @@ import java.util.regex.Pattern;
 
 public class UserRegistration {
     boolean matches;
+    
 
     public IValidator name = (name) -> {
         try {
