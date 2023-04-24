@@ -35,5 +35,6 @@ public class Main {
             System.out.println("Valid input password");
         else
             System.out.println("Invalid input password");
+            
     }
 }
