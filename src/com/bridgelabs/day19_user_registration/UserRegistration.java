@@ -8,5 +8,6 @@ public class UserRegistration {
             Pattern pattern=Pattern.compile("^[A-Z][a-zA-Z]{2,}");
             boolean matches = pattern.matcher(firstName).matches();
             return matches;
+                
         }
 }
