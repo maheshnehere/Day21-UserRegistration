@@ -45,5 +45,6 @@ public class Main {
         SampleEmailCheck sampleEmailCheck = new SampleEmailCheck();
         sampleEmailCheck.validEmailcheck();
         sampleEmailCheck.invalidEmailcheck();
+        
     }
 }
