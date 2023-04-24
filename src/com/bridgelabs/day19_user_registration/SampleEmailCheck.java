@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.regex.Pattern;
 
+
 public class SampleEmailCheck {
     ArrayList<String> validEmails = new ArrayList<>();
     ArrayList<String> inValidEmails = new ArrayList<>();
