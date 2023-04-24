@@ -8,4 +8,4 @@ abc..2002@gmail.com
 abc.@gmail.com
 abc@abc@gmail.com
 abc@gmail.com.1a
-abc@gmail.com.aa.au
+abc@gmail.com.aa.a
