@@ -1,7 +1,6 @@
 package com.bridgelabs.day19_user_registration;
 
 import java.util.regex.Pattern;
-
 public class UserRegistration {
     boolean matches;
     
