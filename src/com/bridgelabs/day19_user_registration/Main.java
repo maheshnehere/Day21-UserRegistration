@@ -1,7 +1,7 @@
 package com.bridgelabs.day19_user_registration;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
-public class Main {
+public class Main { 
     public static void main(String[] args) throws FileNotFoundException {
         System.out.println("Welcome to day 19 user registration program");
         UserRegistration user = new UserRegistration();
