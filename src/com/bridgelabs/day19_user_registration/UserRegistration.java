@@ -8,6 +8,7 @@ public class UserRegistration {
             Pattern pattern=Pattern.compile("^[A-Z][a-zA-Z]{2,}");
             boolean matches = pattern.matcher(name).matches();
             return matches;
+            
         }
     public boolean validateEmail(String email) {
 /*        E.g. abc.xyz@bl.co.in
