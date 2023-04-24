@@ -20,6 +20,7 @@ public class Main {
         System.out.println("Enter the email id");
         String email = scanner.next();
         if (user.validateEmail(email) == true)
+            
             System.out.println("Valid input email");
         else
             System.out.println("Invalid input email");
